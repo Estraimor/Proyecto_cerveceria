@@ -1,4 +1,5 @@
 <?php
+conexionphp();
 function conexionphp(){
     $server = 'localhost';
     $user = 'root';
