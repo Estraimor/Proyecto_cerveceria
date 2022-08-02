@@ -17,10 +17,36 @@ header{
 }
 .fondo{
     background-image: url("./imagen/cerveza2.jpg");
-    backdrop-filter: blur(0px);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backdrop-filter: blur(6px);
     width: 100%;
-    height: 100%;
-    
+    height: 595px;
+}
+.fondoubi{
+    background-image: url("./imagen/cerveza2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 690px;
+}
+
+.fondolog{
+    background-image: url("./imagen/cerveza2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 663px;
+}
+.fondocon{
+    background-image: url("./imagen/cerveza2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 663px;
 }
 
 .header__superior{
@@ -79,6 +105,12 @@ nav ul li{
     height:50px;
     border-radius:150px;
     margin-top: 8.2px
+}
+
+.icono:hover{
+    transform: scale(1.2);
+    background: #6f1003;
+    box-shadow: 0px 0px 40px 0px ;
 }
 
 nav > ul > li > a{
@@ -387,7 +419,7 @@ nav > ul > li:first-child a{
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 70px 30px;
-    margin-top: 380px;
+    margin-top: 30px;
 }
 .login-box .avatar{
     width: 100px;
