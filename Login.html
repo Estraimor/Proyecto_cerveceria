@@ -41,11 +41,11 @@
     <div class="login-box">
         <img class="avatar" src="./imagen/etnia.jpg" width="700px" height="500px" alt="Logo etnia" >
         <h1>Login Here</h1>
-        <form>
+        <form action="./conexionphp/conexion.php" method="post">
             <label for="Nombre">Nombre</label>
-            <input class="nombre" type="text" placeholder="Ingrese su nombre">
+            <input class="nombre" type="text" placeholder="Ingrese su nombre" required>
             <label for="Contraseña">Contraseña</label>
-            <input class="contraseña" type="password" placeholder="Ingrese su contraseña">
+            <input class="contraseña" type="password" placeholder="Ingrese su contraseña" required>
             <input type="submit" value="Log In">
             <br>
             <div>
