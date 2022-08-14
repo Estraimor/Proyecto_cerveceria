@@ -18,6 +18,8 @@
 
 echo $conectar->host_info . "\n";
 
+
+/*
 $nombre=$_POST["nombres"];
 $apellido=$$_POST["apelldos"];
 $correo=$_POST["correo"];
@@ -25,4 +27,4 @@ $direccion=$_POST["direccion"];
 
 $insertar = "INSERT INTO cliente ( apellido,nombre, correo_electronico , direccion_ciente) VALUES ('$apellido', '$nombre', '$correo','$direccion')";
 
-$consulta= mysqli_query($conectar,$insertar);
+$consulta= mysqli_query($conectar,$insertar);*/?>
