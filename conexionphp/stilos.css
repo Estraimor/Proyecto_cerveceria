@@ -1,0 +1,593 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+header{
+    width:100% ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+
+}
+.fondo{
+    background-image: url("./imagen/cerveza2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.fondoubi{
+    background-image: url("./imagen/cerveza2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.fondolog{
+    background-image: url("./imagen/cerveza2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.fondocon{
+    background-image: url("./imagen/cerveza2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.header__superior{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+
+}
+
+.logo img{
+    width: 250px;
+}
+.container__menu{
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    padding: 0px 20px;
+}
+.container__menu1{
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    padding: 0px 20px;
+    margin-top: 0px;
+}
+.croto{
+   visibility: hidden;
+}
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+
+}
+
+nav{
+    height: 100%;
+    
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.icono {
+    width:50px;
+    height:50px;
+    border-radius:150px;
+    margin-top: 8.2px
+}
+
+.icono:hover{
+    transform: scale(1.2);
+    background: #6f1003;
+    box-shadow: 0px 0px 40px 0px ;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition: all 300ms ease;
+    color: rgb(255, 0, 0);
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1.2);
+    background: #6f1003;
+    box-shadow: 0px 0px 40px 0px ;
+}
+
+#selected{
+    transform: scale(1.2);
+    background-color: #6f1003;
+    box-shadow: 0px 0px 40px 0px ;
+}
+
+/* subMenu*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+visibility: visible;
+opacity: 1;
+top: 70px;
+}
+
+nav ul li ul::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: #851919;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background: #851919;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,0.5);
+}
+
+/* elementos responsivos*/
+
+.icon__menu{
+    font-size: 26px;
+    color: rgb(149, 32, 32);
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+
+@media screen and (max-width: 720px){
+.header__superior{
+    padding: 10px;
+
+}
+.logo img{
+    width: 200px;
+}
+nav > ul{
+    flex-direction: column;
+    background-color: #000000;
+    position: fixed;
+    left: 0px;
+    top: 158px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav > ul >li >a:hover{
+    transform: scale(1);
+}  
+
+nav ul li ul{
+    position: 90px;
+}
+
+nav > ul > li:hover ul{
+    top: 50px;
+}
+
+nav > ul > li:first-child a{
+    background-position: 20px;
+}
+
+#selected{
+    transform: scale(1);
+}
+
+#label__check{
+    display: block;
+}
+
+.icon__menu{
+    display: flex;
+}
+
+#check__menu:checked ~ nav > ul{
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+
+}
+}
+
+
+/* slider*/
+
+.slider-frame {
+	width: 1080px;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+    margin-top: 65px;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+
+.h1-ubicacion{
+    color: #fff;
+    background-color: black;;
+}
+
+.img{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.cervezas{
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 40px;
+    
+}
+.linea{
+    background: rgb(160, 69, 9);
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+    
+
+
+    
+}
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+
+}
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+.galeria a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+}
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.light-box img{
+    width: 75vw;
+    max-height: 70vh;
+}
+.light-box:target{
+   transform: scale(1);
+}
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #851919;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.login-box{
+    width: 320px;
+    height: 420px;
+   background: rgb(0, 0, 0);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    margin-top: 30px;
+}
+.login-box .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.login-box label{
+margin: 0;
+padding: 0;
+font-weight: bold;
+display: block;
+}
+.login-box h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff ;
+    background: transparent;
+    outline:none;
+    height: 40px;
+    color:#fff;
+    font-size: 1em;
+}
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fff;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+/*  registro de cuenta  */
+
+.form-register {
+  width: 400px;
+  background: #000000;
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #470303;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  border: 1px solid #200202;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #c51f1f;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 1em 0;
+  font-size: 1em;
+}
+
+
+#main-container{
+    margin: 150px auto;
+    width: 600px;
+}
+table{
+    background-color: #fff;
+    border-collapse:collapse ;
+    text-align: left;
+    width: 100%;
+}
+th,td{
+    padding: 20px;
+}
+thead{
+background-color:#510303 ;
+border-bottom: solid 5px #000000;
+color:white;
+
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+tr:hover{
+    background-color: #850404;
+    color: white;
+}
+
+
+
+
+.formulario-cerveza{
+width: 450px;
+margin: auto;
+background: rgba(0, 0, 0,0.4);
+padding: 10px 20px;
+box-sizing: border-box;
+margin-top: 20px;
+border-radius: 7px;
+}
+
+.crevezeria-footer{
+    color:#fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.input-cervezeria , textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+
+textarea{
+min-height: 150px;
+max-height: 350px;
+max-width: 100%;
+}
+
+#boton-cerveza{
+    background: #e8402a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 200px;
+    outline: #000000;
+}
+
+#boton-cerveza:hover{
+    cursor: pointer;
+}
+
+
