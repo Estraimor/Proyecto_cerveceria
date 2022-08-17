@@ -18,7 +18,7 @@
             <nav>
                 <ul>
                     <div>
-                        <a href="index.html"> <img src="./imagen/etnia.jpg" class="icono" /></a>
+                        <a href="../index.html  "> <img src="./imagen/etnia.jpg" class="icono" /></a>
                     </div>
                     <li><a href="formulario.php">formulario</a>
                     <li><a href="ver clientes.php">VER CLIENTES</a></li>                    
