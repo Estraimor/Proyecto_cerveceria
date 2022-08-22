@@ -19,22 +19,27 @@ header{
     background-image: url("./imagen/cerveza2.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
 }
+
 .fondoubi{
     background-image: url("./imagen/cerveza2.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
 }
 
 .fondolog{
     background-image: url("./imagen/cerveza2.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
 }
 .fondocon{
     background-image: url("./imagen/cerveza2.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
 }
 
 .header__superior{
@@ -46,7 +51,12 @@ header{
     padding: 0px;
 
 }
+.white{
+    background-image: url("white.jpg");
+    width: 1138px;
+    margin-left: 110px;
 
+}
 .logo img{
     width: 250px;
 }
@@ -208,7 +218,7 @@ nav ul li ul li a:hover{
 @media screen and (max-width: 720px){
 .header__superior{
     padding: 10px;
-
+    
 }
 .logo img{
     width: 200px;
@@ -225,6 +235,7 @@ nav > ul{
     z-index: 100;
     opacity: 0;
     visibility: hidden;
+    
 }
 
 nav > ul >li >a:hover{
@@ -272,6 +283,7 @@ nav > ul > li:first-child a{
 	margin:50px auto 0;
 	overflow: hidden;
     margin-top: 65px;
+    border-radius: 50px;
 }
 
 .slider-frame ul {
@@ -338,11 +350,7 @@ nav > ul > li:first-child a{
     margin: auto;
     grid-gap: 10px;
     padding: 40px 0;
-    overflow: hidden;
-    
-
-
-    
+    overflow: hidden;   
 }
 .galeria img{
     width: 100%;
@@ -410,6 +418,7 @@ nav > ul > li:first-child a{
     box-sizing: border-box;
     padding: 70px 30px;
     margin-top: 30px;
+    border-radius: 20px;
 }
 .login-box .avatar{
     width: 100px;
@@ -467,6 +476,7 @@ display: block;
   font-family: 'calibri';
   color: white;
   box-shadow: 7px 13px 37px #000;
+  border-radius: 20px;
 }
 
 .form-register h4 {
@@ -484,6 +494,7 @@ display: block;
   font-family: 'calibri';
   font-size: 18px;
   color: white;
+  border-radius: 10px;
 }
 
 .form-register p {
@@ -513,36 +524,35 @@ display: block;
   font-size: 1em;
 }
 
+.botons{
+    border-radius: 20px;
+}
 
 #main-container{
-    margin: 150px auto;
+    margin: 10px auto;
+    margin-top: 50px;
+    margin-right: 450px;
     width: 600px;
 }
-table{
-    background-color: #fff;
-    border-collapse:collapse ;
-    text-align: left;
-    width: 100%;
-}
-th,td{
-    padding: 20px;
-}
-thead{
-background-color:#510303 ;
-border-bottom: solid 5px #000000;
-color:white;
+.table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+    width: 700px
+  }
+  
+  th, td {
+    padding: 2em;
+    background: #ddd;
+  }
 
+  th:hover{
+    background-color: #bfc749;
+    
 }
-tr:nth-child(even){
-    background-color: #ddd;
+  td:hover{
+    background-color: #bfc749;
 }
-tr:hover{
-    background-color: #850404;
-    color: white;
-}
-
-
-
 
 .formulario-cerveza{
 width: 450px;
