@@ -33,18 +33,20 @@
  <br>
  <br>
  <br>
+ <section class="form-register">
 <form action="./insertar_cliente.php" method="POST">
 
-<input type="text" name="Nombres" placeholder="Ingrese Nombre" required><br>
-    <input type="text" name="Apellidos" placeholder="Ingrese Apellido" required><br>
-    <input type="number" name="celular" placeholder="celular (+54)" required><br>
-    <input type="email" name="correo" placeholder="Ingrese su correo" required><br>
-    <input type="text" name="direccion" placeholder="Ingrese su direccion" required><br>
-    <button type="submit" name="Enviar">Enviar</button>
+<input class="controls" type="text" name="Nombres" placeholder="Ingrese Nombre" required><br>
+    <input class="controls" type="text" name="Apellidos" placeholder="Ingrese Apellido" required><br>
+    <input class="controls" type="number" name="celular" placeholder="celular (+54)" required><br>
+    <input class="controls" type="email" name="correo" placeholder="Ingrese su correo" required><br>
+    <input class="controls" type="text" name="direccion" placeholder="Ingrese su direccion" required><br>
+    <button class="botons" type="submit" name="Enviar">Enviar</button>
     <a href="../index.html">Volver a la pagina principal </a>
 
 
 
 </form>
+</section>
 </body>
 </html>
