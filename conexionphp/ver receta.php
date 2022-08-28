@@ -28,7 +28,6 @@ include('conexion.php');
                         <a href="../index.html"> <img src="./imagen/etnia.jpg" class="icono" /></a>
                     </div>
 					<li><a href="./administracion.php">Administracion</a></li>
-					
                     
                 </ul>       
             </nav>
@@ -41,32 +40,27 @@ include('conexion.php');
 
 	<table border="1" >
 		<tr>
-			<td>nombre</td>
-			<td>apellido</td>
-			<td>celular</td>
-			<td>email</td>
-			<td>direccion</td>	
+			<td>ID</td>
+			<td>Nombre</td>
+			<td>Ingredientes</td>
 		</tr>
 
 		<?php 
-		$sql="SELECT * from cerveceria.cliente";
+		$sql="SELECT * from cerveceria.receta";
 		$result=mysqli_query($conectar,$sql);
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
 
 		<tr>
-			<td><?php echo $mostrar['nombre'] ?></td>
-			<td><?php echo $mostrar['apellido'] ?></td>
-			<td><?php echo $mostrar['celular'] ?></td>
-			<td><?php echo $mostrar['correo_electronico'] ?></td>
-			<td><?php echo $mostrar['direccion_cliente'] ?></td>
+			<td><?php echo $mostrar['idreceta'] ?></td>
+			<td><?php echo $mostrar['Nombre_RC'] ?></td>
+			<td><?php echo $mostrar['Guia_RC'] ?></td>
 		</tr>
 	<?php 
 	}
 	 ?>
 	</table>
-	
 
 </body>
 </html>

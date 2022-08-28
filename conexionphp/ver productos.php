@@ -28,7 +28,6 @@ include('conexion.php');
                         <a href="../index.html"> <img src="./imagen/etnia.jpg" class="icono" /></a>
                     </div>
 					<li><a href="./administracion.php">Administracion</a></li>
-					
                     
                 </ul>       
             </nav>
@@ -42,25 +41,24 @@ include('conexion.php');
 	<table border="1" >
 		<tr>
 			<td>nombre</td>
-			<td>apellido</td>
-			<td>celular</td>
-			<td>email</td>
-			<td>direccion</td>	
+			<td>Descripcion</td>
+			<td>Precio</td>
+			<td>Stock</td>
 		</tr>
 
 		<?php 
-		$sql="SELECT * from cerveceria.cliente";
+		$sql="SELECT * from cerveceria.productos";
 		$result=mysqli_query($conectar,$sql);
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
 
 		<tr>
-			<td><?php echo $mostrar['nombre'] ?></td>
-			<td><?php echo $mostrar['apellido'] ?></td>
-			<td><?php echo $mostrar['celular'] ?></td>
-			<td><?php echo $mostrar['correo_electronico'] ?></td>
-			<td><?php echo $mostrar['direccion_cliente'] ?></td>
+			<td><?php echo $mostrar['Nombre_producto'] ?></td>
+			<td><?php echo $mostrar['descripcion_producto'] ?></td>
+			<td><?php echo $mostrar['precio_producto'] ?></td>
+			<td><?php echo $mostrar['stock_producto'] ?></td>
+			
 		</tr>
 	<?php 
 	}

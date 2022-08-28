@@ -20,8 +20,15 @@
                     <div>
                         <a href="../index.html  "> <img src="./imagen/etnia.jpg" class="icono" /></a>
                     </div>
-                    <li><a href="formulario.php">formulario</a>
-                    <li><a href="ver clientes.php">VER CLIENTES</a></li>                    
+                   
+                    <li><a href="ver clientes.php">VER CLIENTES</a></li>
+                    <li><a href="productos.php">Ingreso de Productos</a></li>
+                    <li><a href="./materia prima.php">Ingreso de Materias Primas</a></li>  
+                    <li><a href="./ver productos.php">Ver Productos</a></li>
+                    <li><a href="./receta.php">Ingresar la receta</a></li>  
+                    <li><a href="./ver receta.php">Ver receta</a></li>
+                    <li><a href="./ver materia prima.php">Ver materia primas</a></li>
+
                 </ul>       
             </nav>
             

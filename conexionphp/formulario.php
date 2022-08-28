@@ -36,13 +36,14 @@
  <section class="form-register">
 <form action="./insertar_cliente.php" method="POST">
 
-<input class="controls" type="text" name="Nombres" placeholder="Ingrese Nombre" required><br>
-    <input class="controls" type="text" name="Apellidos" placeholder="Ingrese Apellido" required><br>
+<input class="controls" type="text" name="Nombres" placeholder="Ingrese Nombre y Apellido" required><br>
+    <input class="controls" type="text" name="Apellidos" placeholder="Ingrese una contraseña" required><br>
     <input class="controls" type="number" name="celular" placeholder="celular (+54)" required><br>
     <input class="controls" type="email" name="correo" placeholder="Ingrese su correo" required><br>
     <input class="controls" type="text" name="direccion" placeholder="Ingrese su direccion" required><br>
     <button class="botons" type="submit" name="Enviar">Enviar</button>
     <a href="../index.html">Volver a la pagina principal </a>
+    <a href="./administracion.php"><h2>Volver a la Administracion</h2></a>
 
 
 
