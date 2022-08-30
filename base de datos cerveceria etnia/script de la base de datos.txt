@@ -1,0 +1,205 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema cerveceria
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema cerveceria
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `cerveceria` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci ;
+USE `cerveceria` ;
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`cliente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`cliente` (
+  `idcliente` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NULL,
+  `apellido` VARCHAR(45) NULL,
+  `celular` VARCHAR(20) NULL,
+  `correo_electronico` VARCHAR(120) NULL,
+  `direccion_cliente` VARCHAR(120) NULL,
+  PRIMARY KEY (`idcliente`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`productos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`productos` (
+  `idproducto` INT(11) NOT NULL AUTO_INCREMENT,
+  `Nombre_producto` VARCHAR(45) NULL,
+  `descripcion_producto` VARCHAR(45) NULL,
+  `precio_producto` DECIMAL(3) NULL,
+  `stock_producto` INT NOT NULL,
+  PRIMARY KEY (`idproducto`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`receta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`receta` (
+  `idreceta` INT(11) NOT NULL,
+  `Nombre_RC` VARCHAR(45) NULL,
+  `Guia_RC` VARCHAR(120) NULL,
+  PRIMARY KEY (`idreceta`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`compra_producto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`compra_producto` (
+  `idcompra_producto` INT NOT NULL,
+  `Lugar_De_Compra` VARCHAR(45) NULL,
+  `Monto_Compra` INT NULL,
+  PRIMARY KEY (`idcompra_producto`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`detalle_compra`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`detalle_compra` (
+  `iddetalle_compra` INT NOT NULL,
+  `descripcion_Compra` VARCHAR(200) NULL,
+  `fecha_compra` VARCHAR(45) NULL,
+  PRIMARY KEY (`iddetalle_compra`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`proveedores`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`proveedores` (
+  `idproveedores` INT NOT NULL,
+  `empresa_proveedor` VARCHAR(120) NULL,
+  `ubicacion_proveedor` VARCHAR(120) NULL,
+  PRIMARY KEY (`idproveedores`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`pedidos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`pedidos` (
+  `idpedidos` INT NOT NULL AUTO_INCREMENT,
+  `fecha_hora_pedido` DATETIME NOT NULL,
+  `ubicacion` VARCHAR(120) NOT NULL,
+  `cliente_idcliente` INT NOT NULL,
+  PRIMARY KEY (`idpedidos`),
+  INDEX `fk_pedidos_cliente1_idx` (`cliente_idcliente` ASC) VISIBLE,
+  CONSTRAINT `fk_pedidos_cliente1`
+    FOREIGN KEY (`cliente_idcliente`)
+    REFERENCES `cerveceria`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`productos_has_pedidos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`productos_has_pedidos` (
+  `productos_idproducto` INT(11) NOT NULL,
+  `pedidos_idpedidos` INT NOT NULL,
+  PRIMARY KEY (`productos_idproducto`, `pedidos_idpedidos`),
+  INDEX `fk_productos_has_pedidos_pedidos1_idx` (`pedidos_idpedidos` ASC) VISIBLE,
+  INDEX `fk_productos_has_pedidos_productos1_idx` (`productos_idproducto` ASC) VISIBLE,
+  CONSTRAINT `fk_productos_has_pedidos_productos1`
+    FOREIGN KEY (`productos_idproducto`)
+    REFERENCES `cerveceria`.`productos` (`idproducto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_productos_has_pedidos_pedidos1`
+    FOREIGN KEY (`pedidos_idpedidos`)
+    REFERENCES `cerveceria`.`pedidos` (`idpedidos`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`materiaPrima`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`materiaPrima` (
+  `idMateria_Prima` INT NOT NULL AUTO_INCREMENT,
+  `Nombre_MP` VARCHAR(100) NULL,
+  `Peso_MP` DECIMAL NULL,
+  `Tipo_MP` VARCHAR(100) NULL,
+  `Precio_MP` INT NULL,
+  `stock_MP` DECIMAL(4) NULL DEFAULT 0,
+  `receta_idreceta` INT(11) NOT NULL,
+  PRIMARY KEY (`idMateria_Prima`),
+  INDEX `fk_Materia_Prima_receta1_idx` (`receta_idreceta` ASC) VISIBLE,
+  CONSTRAINT `fk_Materia_Prima_receta1`
+    FOREIGN KEY (`receta_idreceta`)
+    REFERENCES `cerveceria`.`receta` (`idreceta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`prueba`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`prueba` (
+  `idprueba` INT NOT NULL AUTO_INCREMENT,
+  `fecha` DATETIME NULL,
+  PRIMARY KEY (`idprueba`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`Materia_Prima_has_proveedores`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`Materia_Prima_has_proveedores` (
+  `Materia_Prima_idMateria_Prima` INT NOT NULL,
+  `proveedores_idproveedores` INT NOT NULL,
+  PRIMARY KEY (`Materia_Prima_idMateria_Prima`, `proveedores_idproveedores`),
+  INDEX `fk_Materia_Prima_has_proveedores_proveedores1_idx` (`proveedores_idproveedores` ASC) VISIBLE,
+  INDEX `fk_Materia_Prima_has_proveedores_Materia_Prima1_idx` (`Materia_Prima_idMateria_Prima` ASC) VISIBLE,
+  CONSTRAINT `fk_Materia_Prima_has_proveedores_Materia_Prima1`
+    FOREIGN KEY (`Materia_Prima_idMateria_Prima`)
+    REFERENCES `cerveceria`.`materiaPrima` (`idMateria_Prima`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Materia_Prima_has_proveedores_proveedores1`
+    FOREIGN KEY (`proveedores_idproveedores`)
+    REFERENCES `cerveceria`.`proveedores` (`idproveedores`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cerveceria`.`productos_has_receta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cerveceria`.`productos_has_receta` (
+  `productos_idproducto` INT(11) NOT NULL,
+  `receta_idreceta` INT(11) NOT NULL,
+  PRIMARY KEY (`productos_idproducto`, `receta_idreceta`),
+  INDEX `fk_productos_has_receta_receta1_idx` (`receta_idreceta` ASC) VISIBLE,
+  INDEX `fk_productos_has_receta_productos1_idx` (`productos_idproducto` ASC) VISIBLE,
+  CONSTRAINT `fk_productos_has_receta_productos1`
+    FOREIGN KEY (`productos_idproducto`)
+    REFERENCES `cerveceria`.`productos` (`idproducto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_productos_has_receta_receta1`
+    FOREIGN KEY (`receta_idreceta`)
+    REFERENCES `cerveceria`.`receta` (`idreceta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

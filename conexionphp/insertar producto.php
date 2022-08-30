@@ -32,6 +32,5 @@ $consulta= mysqli_query($conectar,$insertar);
 <body>
     <h1>Su producto se a caergado exitosamente </h1>
     <a href="./administracion.php">Volver a la administracion</a>
-  <a href="../index.html">volver al la pagina principal </a>
 </body>
 </html>

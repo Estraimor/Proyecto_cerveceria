@@ -1,42 +1,42 @@
 [
     {
-      "precio": 500,
+      "precio": 650,
       "id": 1,
       "title": "Negra Modelo",
       "thumbnailUrl": "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54729_default_big.jpeg"
     },
     {
-      "precio": 300,
+      "precio": 600,
       "id": 2,
       "title": "Corona",
       "thumbnailUrl": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/211/660/products/corona-7101-9a2faa7ea9b4adc38d16196380770669-640-0.png"
     },
     {
-      "precio": 100,
+      "precio": 360,
       "id": 3,
       "title": "Heineken",
       "thumbnailUrl": "https://static.wixstatic.com/media/80c0af_5aa936de83034f308e642e2778a91c3b~mv2.jpg/v1/fill/w_498,h_748,al_c,q_85,usm_0.66_1.00_0.01/80c0af_5aa936de83034f308e642e2778a91c3b~mv2.jpg"
     },
     {
-      "precio": 50,
+      "precio": 400,
       "id": 4,
       "title": "Miller",
       "thumbnailUrl": "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54417_default_big.jpeg"
     },
     {
-      "precio": 10,
+      "precio": 360,
       "id": 5,
       "title": "Quilmes Stoud Lata",
       "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/251/225/products/15751-f11-7ff2a24aaef0a50ecc15877153647437-1024-1024.jpg"
     },
     {
-      "precio": 150,
+      "precio": 340,
       "id": 6,
       "title": "Quilmes Clasica Lata",
       "thumbnailUrl": "https://d2r9epyceweg5n.cloudfront.net/stores/001/312/763/products/cerveza-quilmes-lata-x-473-cc11-5e2ef974345496442015981361661187-1024-1024.jpg"
     },
     {
-        "precio": 250,
+        "precio": 520,
         "id": 7,
         "title": "Quilmes Clasica",
         "thumbnailUrl": "https://www.espaciovino.com.ar/media/default/0001/62/thumb_61391_default_medium.jpeg"

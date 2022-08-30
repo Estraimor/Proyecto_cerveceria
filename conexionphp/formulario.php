@@ -20,9 +20,7 @@
                 <ul>
                     <div>
                         <a href="../index.html"> <img src="./imagen/etnia.jpg" class="icono" /></a>
-                    </div>
-                    <li><a href="./formulario.php">Formulario</a></li>
-                    <li><a href="./ver clientes.php">Ver clientes</a></li> 
+                    </div>  
                 </ul>       
             </nav>
             
@@ -43,7 +41,6 @@
     <input class="controls" type="text" name="direccion" placeholder="Ingrese su direccion" required><br>
     <button class="botons" type="submit" name="Enviar">Enviar</button>
     <a href="../index.html">Volver a la pagina principal </a>
-    <a href="./administracion.php"><h2>Volver a la Administracion</h2></a>
 
 
 

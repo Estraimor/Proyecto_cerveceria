@@ -34,6 +34,6 @@ $consulta= mysqli_query($conectar,$insertar);
 </head>
 <body>
     <h1>Su Materia prima se a cargado exitosamente </h1>
-    
+    <hi><a href="./administracion.php">Volver a la administracion</a></hi>
 </body>
 </html>

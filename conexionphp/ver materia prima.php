@@ -41,9 +41,9 @@ include('conexion.php');
 	<table border="1" >
 		<tr>
 			<td>nombre</td>
-			<td>Peso</td>
+			<td>Peso(KG)</td>
 			<td>Tipo</td>
-			<td>Precio</td>
+			<td>Precio($)</td>
             <td>Stock</td>
             <td>Receta</td>
 		</tr>

@@ -22,12 +22,21 @@
                     </div>
                    
                     <li><a href="ver clientes.php">VER CLIENTES</a></li>
-                    <li><a href="productos.php">Ingreso de Productos</a></li>
-                    <li><a href="./materia prima.php">Ingreso de Materias Primas</a></li>  
-                    <li><a href="./ver productos.php">Ver Productos</a></li>
-                    <li><a href="./receta.php">Ingresar la receta</a></li>  
+                    <li><a href="productos.php">Ingreso de Productos</a>
+                <ul>
+                    <li><a href="./ver productos.php">Ver productos</a></li>
+                    <li><a href="#">Modificar Producto</a></li>
+                </ul></li>
+                    <li><a href="./materia prima.php">Ingreso de Materias Primas</a>
+                <ul>
+                    <li><a href="./ver materia prima.php">Ver Materias Primas </a></li>
+                    <li><a href="#">Modificar Materias Primas</a></li>
+                </ul></li>  
+                    <li><a href="./receta.php">Ingresar la receta</a>
+                <ul>
                     <li><a href="./ver receta.php">Ver receta</a></li>
-                    <li><a href="./ver materia prima.php">Ver materia primas</a></li>
+                    <li><a href="#">Modificar receta</a></li>
+                </ul></li>  
 
                 </ul>       
             </nav>
