@@ -31,6 +31,6 @@ $consulta= mysqli_query($conectar,$insertar);
   <title>Document</title>
 </head>
 <body>
-  <hi><a href="./administracion.php"></a></hi>
+  <hi><a href="../index.html">Volver al menu principal</a></hi>
 </body>
 </html>
