@@ -46,6 +46,8 @@ include('conexion.php');
 			<td>celular</td>
 			<td>email</td>
 			<td>direccion</td>	
+            <td>nombre_usuario</td>
+            <td>contraseña</td>
 		</tr>
 
 		<?php 
@@ -61,6 +63,9 @@ include('conexion.php');
 			<td><?php echo $mostrar['celular'] ?></td>
 			<td><?php echo $mostrar['correo_electronico'] ?></td>
 			<td><?php echo $mostrar['direccion_cliente'] ?></td>
+            <td><?php echo $mostrar['nombre_usuario'] ?></td>
+            <td><?php echo $mostrar['pass'] ?></td>
+           
 		</tr>
 	<?php 
 	}

@@ -39,6 +39,8 @@
     <input class="controls" type="number" name="celular" placeholder="celular (+54)" required><br>
     <input class="controls" type="email" name="correo" placeholder="Ingrese su correo" required><br>
     <input class="controls" type="text" name="direccion" placeholder="Ingrese su direccion" required><br>
+    <input class="controls" type="text" name="nombre_usuario" placeholder="ingrese su nombre de usuario" required><br>
+    <input class="controls" type="pass" name="pass" placeholder="Ingrese su contraseña " required><br>
     <button class="botons" type="submit" name="Enviar">Enviar</button>
     <a href="../index.html">Volver a la pagina principal </a>
 

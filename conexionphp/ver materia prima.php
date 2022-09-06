@@ -45,7 +45,6 @@ include('conexion.php');
 			<td>Tipo</td>
 			<td>Precio($)</td>
             <td>Stock</td>
-            <td>Receta</td>
 		</tr>
 
 		<?php 
@@ -61,12 +60,11 @@ include('conexion.php');
 			<td><?php echo $mostrar['Tipo_MP'] ?></td>
 			<td><?php echo $mostrar['Precio_MP'] ?></td>
             <td><?php echo $mostrar['stock_MP'] ?></td>
-            <td><?php echo $mostrar['receta_idreceta'] ?></td>
 			
 		</tr>
-	<?php 
-	}
-	 ?>
+	    <?php 
+	    }
+	    ?>
 	</table>
 	
 

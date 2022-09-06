@@ -40,7 +40,6 @@
     <input class="controls" type="text" name="Tipo" placeholder="ingrese el tipo de la materia prima " required><br>
     <input class="controls" type="number" name="Precio" placeholder="ingrese el Precio de la materia prima" required><br>
     <input class="controls" type="number" name="Stock" placeholder="ingrese el stock de esta materia Prima en KG(Kilo/ Gramos) " required><br>
-    <input class="controls" type="number" name="receta" placeholder="Ingrese para cual receta son estas Materias primas" required><br>
     <button class="botons" type="submit" name="Enviar">Enviar</button>
     <br>
     <a href="./administracion.php">Volver a la administracion </a>
