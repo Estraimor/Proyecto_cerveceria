@@ -18,7 +18,7 @@ $stock=$_POST ["Stock"];
 echo "La materia prima: $nombre tiene un peso de $peso KG es de tipo $tipo tiene un presio de $$precio y hay $stock Kilogramos es para la receta Numero";
 
 
-$insertar = "INSERT INTO materiaprima (Nombre_MP ,Peso_MP ,Tipo_MP,Precio_MP,stock_MP,receta_idreceta) VALUES ( '$nombre', '$peso','$tipo','$precio','$stock')";
+$insertar = "INSERT INTO materiaprima (Nombre_MP ,Peso_MP ,Tipo_MP,Precio_MP,stock_MP) VALUES ( '$nombre', '$peso','$tipo','$precio','$stock')";
   
 $consulta= mysqli_query($conectar,$insertar);
     }

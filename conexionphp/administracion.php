@@ -26,6 +26,8 @@
                 <ul>
                     <li><a href="./ver productos.php">Ver productos</a></li>
                     <li><a href="#">Modificar Producto</a></li>
+                    <li><a href="./ingreso historial producto.php">ingresar stock</a></li>
+                    <li><a href="./ver historial producto.php">Ver historial del producto</a></li>  
                 </ul></li>
                     <li><a href="./materia prima.php">Ingreso de Materias Primas</a>
                 <ul>
@@ -35,10 +37,7 @@
                     <li><a href="./receta.php">Ingresar la receta</a>
                 <ul>
                     <li><a href="./ver receta.php">Ver receta</a></li>
-                    <li><a href="#">Modificar receta</a></li>
-                </ul></li>  
-
-                </ul>       
+                    <li><a href="#">Modificar receta</a></li>      
             </nav>
             
         </div>
